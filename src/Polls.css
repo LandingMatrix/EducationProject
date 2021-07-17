@@ -4,6 +4,7 @@
     --width-ans3: 0%;
     --width-ans4: 0%;
     --width-ans5: 0%;
+    --correct-bg: #77dd77
 }
 
 .ans1 { width: var(--width-ans1); }
