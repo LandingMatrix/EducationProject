@@ -1,18 +1,15 @@
 :root {
-    --oldWidth: 0;
-    --width: 100;
+    --width: 0%;
 }
-
 
 .bar {
     height: 30px;
+    width: var(--width);
     background-color: green;
-    animation: Bar-Transform 4s ease 0s infinite;
 }
 
-@keyframes Bar-Transform {
-    0% { width: calc(var(--oldWidth)*1%); }
-    100% { width: calc(var(--width)*1%) ;}
-}
+.bar-transition {
+    transition: width 2s ease-in-out;
+} 
 
 /* calc(var(--width)*100%) */
