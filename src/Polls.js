@@ -2,11 +2,11 @@ import './Polls.css';
 
 const Polls = () => {
     const options = []
-    const answers = [5, 0, 0, 0, 1000];
+    const answers = [6, 19, 4, 0, 3];
     updateVotes(answers);
 
     return (
-        <div>
+        <div class="poll-bg">
             <div class='bar bar-transition ans1'></div>
             <div class='bar bar-transition ans2'></div>
             <div class='bar bar-transition ans3'></div>
