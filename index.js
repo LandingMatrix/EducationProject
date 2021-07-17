@@ -9,6 +9,8 @@ app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
 
+console.log('HI ITS KEAN');
+
 //to test the project just use
 //node index.js
 
