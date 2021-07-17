@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+:root {
+  --pastelGreen: #70AE98;
+  --pastelYellow: #ECBE7A;
+  --pastelRed: #E58B88;
+  --pastelBlue: #9DABDD;
+  --pastelViolet: #9C8CDB;
+  --pastelGray: #282a35;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,7 +34,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
-  background-color: #1f93ff;
+  background-color: var(--pastelGray);
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 1.3em;
@@ -107,7 +116,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #1f93ff;
+  background-color: var(--pastelGray);
   height: 30vh;
   gap: 3rem;
 }

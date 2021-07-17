@@ -1,6 +1,14 @@
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+:root{
+    --pastelGreen: #70AE98;
+    --pastelYellow: #ECBE7A;
+    --pastelRed: #E58B88;
+    --pastelBlue: #9DABDD;
+    --pastelViolet: #9C8CDB;
+    --pastelGray: #282a35;
+}
 
 *{
     padding: 0;
@@ -20,7 +28,7 @@ body{
     flex-direction: row;
     align-items: center;
     padding: 0.5rem;
-    background-color: #1f93ff;
+    background-color: var(--pastelGray);
     // backdrop-filter: blur(20rem);
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
@@ -76,7 +84,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #1f93ff;
+    background-color: var(--pastelGray);
     height: 30vh;
     gap: 3rem;
     .question{
