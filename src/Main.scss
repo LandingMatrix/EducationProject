@@ -46,12 +46,22 @@ body{
     }
     .login{
         width: calc(100%/3);
-        text-align: right;
-        a{
-            text-decoration: none;
-            color: #bbb;
-            font-weight: 900;
-            padding: 0.5rem;
+        display: flex;
+        flex-direction: row-reverse;
+        .login__inner{
+            a{
+                text-decoration: none;
+                color: #bbb;
+                font-weight: 900;
+                padding: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 40px;
+                    margin-right: 0.4em;
+                }
+            }
         }
     }
 }
