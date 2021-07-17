@@ -1,9 +1,10 @@
 import './Polls.css';
-
+let root = document.documentElement;
 const Polls = () => {
     const options = []
     const answers = [6, 19, 4, 0, 3];
     updateVotes(answers);
+
 
     return (
         <div class="poll-bg">
