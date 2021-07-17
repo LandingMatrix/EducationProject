@@ -6,16 +6,18 @@ function NavBar() {
   return (
     <div className="nav">
       <div className="logo">
-        <a href="#"><img src={ logo } alt=""/></a>
+        <link to="/Question"><img src={ logo } alt=""/></link>
       </div>
       <div className="links">
-        <a href="#">Home</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
+        <ul>
+          <li to="">Home</li>
+          <li href="#">Contact</li>
+          <li href="#">About</li>
+        </ul>
       </div>
       <div className="login">
         <div className="login__inner">
-          <a href="#"><img src={ profile } alt=""/> Log in</a>
+          <Link href="#"><img src={ profile } alt=""/> Log in </Link>
         </div>
       </div>
     </div>
