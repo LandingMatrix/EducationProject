@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
   const companyName = 'Edisco';
-
+  
   return (
     <div className="App">
       <div className="content">
