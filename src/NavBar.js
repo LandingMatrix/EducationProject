@@ -15,7 +15,7 @@ function NavBar() {
       </div>
       <div className="login">
         <div className="login__inner">
-          <a href="#"><img src={ profile } alt=""/> Log in</a>
+          <a href="#"><img src={ profile } alt=""/> Log in </a>
         </div>
       </div>
     </div>
