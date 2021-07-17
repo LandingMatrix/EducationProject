@@ -4,14 +4,25 @@
     --width-ans3: 0%;
     --width-ans4: 0%;
     --width-ans5: 0%;
-    --correct-bg: #77dd77
+
+    --correct-bg: #77dd77;
+    --pastelGreen: #70AE98;
+    --pastelYellow: #ECBE7A;
+    --pastelRed: #E58B88;
+    --pastelBlue: #9DABDD;
+    --pastelViolet: #9C8CDB;
+    --pastelGray: #282a35;
 }
 
-.ans1 { width: var(--width-ans1); }
-.ans2 { width: var(--width-ans2); }
+.ans1 { width: var(--width-ans1); background-color: var(--bg-ans1); }
+.ans2 { width: var(--width-ans2); background-color: var(--bg-ans2); }
 .ans3 { width: var(--width-ans3); }
 .ans4 { width: var(--width-ans4); }
 .ans5 { width: var(--width-ans5); }
+
+.poll-bg {
+    background-color: var(--pastelGray);
+}
 
 .bar {
     height: 50px;
