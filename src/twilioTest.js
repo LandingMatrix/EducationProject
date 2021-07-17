@@ -1,6 +1,6 @@
 
-const accountSid = 'AC687792804eaf16fea478a8fd0a9184b5'; 
-const authToken = '8c7dea6574a818b0e2ba842f1a9dbd62'; 
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken); 
  
 client.messages 
