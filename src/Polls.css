@@ -5,6 +5,12 @@
     --width-ans4: 0%;
     --width-ans5: 0%;
 
+    --bg-ans1: #282a35;
+    --bg-ans2: #282a35;
+    --bg-ans3: #282a35;
+    --bg-ans4: #282a35;
+    --bg-ans5: #282a35;
+
     --correct-bg: #77dd77;
     --pastelGreen: #70AE98;
     --pastelYellow: #ECBE7A;
@@ -16,9 +22,9 @@
 
 .ans1 { width: var(--width-ans1); background-color: var(--bg-ans1); }
 .ans2 { width: var(--width-ans2); background-color: var(--bg-ans2); }
-.ans3 { width: var(--width-ans3); }
-.ans4 { width: var(--width-ans4); }
-.ans5 { width: var(--width-ans5); }
+.ans3 { width: var(--width-ans3); background-color: var(--bg-ans3); }
+.ans4 { width: var(--width-ans4); background-color: var(--bg-ans4); }
+.ans5 { width: var(--width-ans5); background-color: var(--bg-ans5); }
 
 .poll-bg {
     background-color: var(--pastelGray);
@@ -26,11 +32,12 @@
 
 .bar {
     height: 50px;
-    background-color: green;
+    margin: 10px;
 }
 
 .bar-transition {
     transition: width 2s ease-in-out;
+    transition: background-color 2s ease-in-out;
 } 
 
 /* calc(var(--width)*100%) */
