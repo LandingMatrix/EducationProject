@@ -1,16 +1,13 @@
-const twilio = require('twilio');
 
-//The SID and AuthToken are both test values right now - change to real values once the testing is finished
-const accSid = 'AC687792804eaf16fea478a8fd0a9184b5';
-const authToken = '6956f63407e7da3f75e71d6f7458f360';
-
-const clientSide = new twilio(accSid, authToken);
-
-let msg = [];
-
-clientSide.messages.create({
-    body: 'Hello',
-    to: '+61434190715',
-    from: '+61480093159'
-})
-.then(message => console.log(messages.sid))
+const accountSid = 'AC687792804eaf16fea478a8fd0a9184b5'; 
+const authToken = '8c7dea6574a818b0e2ba842f1a9dbd62'; 
+const client = require('twilio')(accountSid, authToken); 
+ 
+client.messages 
+      .create({ 
+         body: 'HIII Thomass :)))',  
+         messagingServiceSid: 'MG0d85bd1acab334cf22691b901a316e10',      
+         to: '+61423456084' 
+       }) 
+      .then(message => console.log(message.sid)) 
+      .done();
