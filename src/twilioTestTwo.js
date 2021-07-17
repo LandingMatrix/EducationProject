@@ -28,19 +28,6 @@ let messages = [];
 messages.forEach(m => {
     const num = m.from
 
-    /*
-    // convert JSON object to string
-    const data = JSON.stringify(m);
-
-    // write JSON string to a file
-    fs.writeFile('user.json', data, (err) => {
-        if (err) {
-            throw err;
-        }
-        console.log("JSON data is saved.");
-    });
-    */
-
     client.messages.create({
 
         from: "+61480093159",
@@ -52,8 +39,28 @@ messages.forEach(m => {
         url: "https://handler.twilio.com/twiml/EH72a472ace7bb5161fc018ff43a41ffa8"
     })
 })
+app.post('/sms', (req, res) => {
+  const twiml = new MessagingResponse();
+
+  twiml.message('The Robots are coming! Head for the hills!');
+
+  res.writeHead(200, {'Content-Type': 'text/xml'});
+  res.end(twiml.toString());
+});
+
+http.createServer(app).listen(1337, () => {
+  console.log('Express server listening on port 1337');
+});
 
 
+// const data = JSON.stringify(messages);
+//   // write JSON string to a file
+//   fs.writeFile('user.json', data, (err) => {
+//     if (err) {
+//         throw err;
+//     }
+//     console.log("JSON data is saved.");
+// });
 
 
 
