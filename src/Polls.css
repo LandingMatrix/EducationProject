@@ -1,10 +1,21 @@
 :root {
     --width: 0%;
+    --width-ans1: 0%;
+    --width-ans2: 0%;
+    --width-ans3: 0%;
+    --width-ans4: 0%;
+    --width-ans5: 0%;
 }
 
+.ans1 { width: var(--width-ans1); }
+.ans2 { width: var(--width-ans2); }
+.ans3 { width: var(--width-ans3); }
+.ans4 { width: var(--width-ans4); }
+.ans5 { width: var(--width-ans5); }
+
 .bar {
-    height: 30px;
     width: var(--width);
+    height: 30px;
     background-color: green;
 }
 
