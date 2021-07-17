@@ -1,15 +1,28 @@
 import './Polls.css';
 let root = document.documentElement;
 const Polls = () => {
-    updateVotes('ans1', 100);
-    setTimeout(() => { updateVotes('ans1', 20); }, 2000);
+    const options = []
+    const answers = [5, 0, 0, 0, 1000];
+    updateVotes(answers);
+
 
     return (
-        <div class='bar bar-transition ans1'></div>
+        <div>
+            <div class='bar bar-transition ans1'></div>
+            <div class='bar bar-transition ans2'></div>
+            <div class='bar bar-transition ans3'></div>
+            <div class='bar bar-transition ans4'></div>
+            <div class='bar bar-transition ans5'></div>
+        </div>
     );
 
-    function updateVotes(ans, votes) {
-        root.style.setProperty('--width-'+ans, votes+'%');
+    function updateVotes(answers) {
+        var totalVotes = answers.reduce(function(a,b) { return a + b; }, 0);
+
+        for (let i = 0; i < answers.length; i++) {
+            var votePercent = 100 * answers[i] / totalVotes;
+            document.documentElement.style.setProperty('--width-ans'+parseInt(i+1), votePercent+'%');
+        }
     }
 }
  
