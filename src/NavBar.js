@@ -9,9 +9,11 @@ function NavBar() {
         <link to="/Question"><img src={ logo } alt=""/></link>
       </div>
       <div className="links">
-        <a href="#">Home</a>
-        <a href="#">Contact</a>
-        <a href="#">About</a>
+        <ul>
+          <li to="">Home</li>
+          <li href="#">Contact</li>
+          <li href="#">About</li>
+        </ul>
       </div>
       <div className="login">
         <div className="login__inner">
