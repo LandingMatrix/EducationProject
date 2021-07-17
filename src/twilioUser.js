@@ -20,32 +20,48 @@ const { default: userEvent } = require('@testing-library/user-event');
 
 app.use(express.urlencoded({ extended: false }));
 
-
-
 app.post('/sms', (req, res) => {
 
     console.log(req.body.From);
     // convert JSON object to string
     const data = JSON.stringify(req.body.From);
 
-    
-    
-    
+
     // write JSON string to a file - the a flag appends if the file does not already exist
     fs.writeFile('user.json', data + ',', { flag: 'a+'}, (err) => {
         var arrData = data;
         var collData = JSON.parse('[' + arrData + ']');
         
-
     if (err) {
         throw err;
     }
     console.log(collData);
 });
 
-    const response = '<Response><Message>Welcome to Edia, are you ready to answer our QUESTIONS???</Message></Response>';
+    const response = '<Response><Message>Welcome to Edia, are you ready to answer our questions?</Message></Response>';
     res.setHeader('Content-Type', 'text/xml');
     res.send(response);
+});
+
+
+
+app.post('/sms', (req, res) => {
+
+  fs.readFile('towardsUser.json', (err, towardsData) => {
+    if (err) {
+        throw err;
+    }
+    var towardsUser = JSON.parse(towardsData);
+    console.log(towardsUser);
+
+
+    const askUser = '<Response><Message>You have recieved an automated message!</Message></Response>';
+    res.setHeader('Content-Type', 'text/xml');
+    res.send({body: 'You have recieved an automated message!', from: '+61480093159', to: towardsUser[0] })
+    .then(message => console.log(message.sid));
+
+  });
+
 });
 
 app.listen(3500, () => {
