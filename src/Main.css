@@ -1,3 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#0b0b3a), to(#da370e));
+  background: linear-gradient(#0b0b3a, #da370e);
+  height: 100vh;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,12 +20,31 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5rem;
+  -webkit-backdrop-filter: blur(20rem);
+          backdrop-filter: blur(20rem);
+}
+
+.nav .logo {
+  width: calc(100%/3);
+  text-align: left;
+}
+
+.nav .logo a img {
+  height: 50px;
+}
+
+.nav .links {
+  width: calc(100%/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav .links a {
@@ -23,9 +53,81 @@
   font-weight: 900;
 }
 
+.nav .links a:not(:first-of-type) {
+  margin-left: 9rem;
+}
+
+.nav .login {
+  width: calc(100%/3);
+  text-align: right;
+}
+
 .nav .login a {
   text-decoration: none;
   color: #bbb;
   font-weight: 900;
+  padding: 0.5rem;
+}
+
+.content {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    -webkit-animation: App-logo-spin infinite 20s linear;
+            animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=Main.css.map */
