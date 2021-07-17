@@ -9,24 +9,36 @@
     top: 0;
     flex-direction: row;
     align-items: center;
+    padding: 0.5rem;
     .logo{
         width: calc(100%/3);
+        a{
+            img{
+            height: 50px;
+            }
+        }
     }
     .links{
         width: calc(100%/3);
-        display: ;
+        display: flex;
+        justify-content: center;
         a{
             text-decoration: none;
             color: #bbb;
             font-weight: 900;
+            &:not(:first-of-type){
+                margin-left: 9rem;
+            }
         }
     }
     .login{
         width: calc(100%/3);
+        text-align: right;
         a{
             text-decoration: none;
             color: #bbb;
             font-weight: 900;
+            padding: 0.5rem;
         }
     }
 }

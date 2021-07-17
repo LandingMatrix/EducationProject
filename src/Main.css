@@ -17,14 +17,25 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0.5rem;
 }
 
 .nav .logo {
   width: calc(100%/3);
 }
 
+.nav .logo a img {
+  height: 50px;
+}
+
 .nav .links {
   width: calc(100%/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .nav .links a {
@@ -33,13 +44,19 @@
   font-weight: 900;
 }
 
+.nav .links a:not(:first-of-type) {
+  margin-left: 9rem;
+}
+
 .nav .login {
   width: calc(100%/3);
+  text-align: right;
 }
 
 .nav .login a {
   text-decoration: none;
   color: #bbb;
   font-weight: 900;
+  padding: 0.5rem;
 }
 /*# sourceMappingURL=Main.css.map */
