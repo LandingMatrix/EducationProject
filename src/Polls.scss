@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --ans1: '';
+    --ans2: '';
+    --ans3: '';
+    --ans4: '';
+    --ans5: '';
+
+    --width-ans1: 0%;
+    --width-ans2: 0%;
+    --width-ans3: 0%;
+    --width-ans4: 0%;
+    --width-ans5: 0%;
+
+    --c-ans1: #282a35;
+    --c-ans2: #282a35;
+    --c-ans3: #282a35;
+    --c-ans4: #282a35;
+    --c-ans5: #282a35;
+
+    --bg-ans1: #282a35;
+    --bg-ans2: #282a35;
+    --bg-ans3: #282a35;
+    --bg-ans4: #282a35;
+    --bg-ans5: #282a35;
+
+    --correct-bg: rgb(119,221,119);
+    --pastelGreen: #70AE98;
+    --pastelYellow: #ECBE7A;
+    --pastelRed: #E58B88;
+    --pastelBlue: #9DABDD;
+    --pastelViolet: #9C8CDB;
+    --pastelGray: #282a35;
+}
+
+.ans1 {
+    background-color: var(--bg-ans1);
+    width: var(--width-ans1); 
+    &:after {
+        color: var(--bg-ans1);
+        content: var(--ans1); 
+    }
+    
+}
+
+.ans2 { 
+    background-color: var(--bg-ans2);
+    width: var(--width-ans2); 
+    &:after {
+        color: var(--bg-ans2);
+        content: var(--ans3); 
+    }
+}
+
+.ans3 { 
+    width: var(--width-ans3); 
+    background-color: var(--bg-ans3); 
+    &:after { 
+        color: var(--bg-ans3); 
+        content: var(--ans3); 
+    }
+}
+
+.ans4 { 
+    width: var(--width-ans4); 
+    background-color: var(--bg-ans4); 
+    &:after { 
+        color: var(--bg-ans4); 
+        content: var(--ans4); 
+    }
+}
+
+.ans5 { 
+    width: var(--width-ans5); 
+    background-color: var(--bg-ans5);
+    &:after { 
+        color: var(--bg-ans5);
+        content: var(--ans5); 
+    }
+}
+
+.poll-bg {
+    background-color: var(--pastelGray);
+    font-family: 'Roboto', sans-serif;
+    font-size: 35px;
+}
+
+.bar {
+    height: 50px;
+    margin: 10px;
+    border-radius: 0px 10px 10px 0px;
+
+    text-align: left;
+    color: var(--pastelGray);
+    &:after {
+        padding-left: 10px;
+        vertical-align: middle;
+        mix-blend-mode: difference;
+    }
+}
+
+.bar-transition {
+    transition: width 2s ease-in-out, background-color 2s ease-in-out, color 2s ease-in-out;
+}
