@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './Main.css';
+
 import NavBar from './NavBar';
 import Polls from './pollCmp/Polls';
 import Question from './Question';
