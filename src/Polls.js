@@ -2,18 +2,21 @@ import './Polls.css';
 let root = document.documentElement;
 const Polls = () => {
 
-    const options = ["19", "21", "22", "26", "-3"];
-    const answers = [6, 5, 4, 0, 3];
+    const options = ["19", "21", "22", "26", "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"];
+    const answers = [6, 5, 4, 2, 10];
 
-    //colour each poll bar
+    //colour and populate each poll bar
     const colourList = ['#70AE98', '#ECBE7A', '#E58B88', '#9DABDD', '#9C8CDB'];
     for (let i = 0; i < answers.length; i++) {
         styleChange('--bg-ans'+parseInt(i+1), colourList[i]);
+        styleChange('--ans'+parseInt(i+1), JSON.stringify(options[i]));
     }
 
     updateVotes(answers);
 
-    setTimeout(() => {  markCorrect('21', options); }, 4000);
+    setTimeout(() => {  updateVotes([3, 7, 4, 2, 0]); }, 3000);
+
+    setTimeout(() => {  markCorrect('21', options); }, 8000);
 
     return (
         <div class="poll-bg">
