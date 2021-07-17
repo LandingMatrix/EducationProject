@@ -1,17 +1,15 @@
 import './Polls.css';
 
 const Polls = () => {
+    var votes = 60;
 
-    function changeSize (given) {
-        var el = document.getElementsByClassName(given);
-        el.style.animation-name = 
-    }
+    const style = document.documentElement.style;
 
+    style.setProperty('--width', votes);
+    
     return (
-        <div className="Polls">
-            <div className="bar1"></div>
-        </div>
-      );
+        <div className="bar"></div>
+    );
 }
  
 export default Polls;
