@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#f3f3f3));
+  background: linear-gradient(#d1d1d1, #f3f3f3);
+  height: 100vh;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,23 +21,139 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  background-color: #1f93ff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.3em;
+}
+
+.nav .logo {
+  width: calc(100%/3);
+  text-align: left;
+}
+
+.nav .logo a img {
+  height: 50px;
+}
+
+.nav .links {
+  width: calc(100%/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav .links a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 900;
+}
+
+.nav .links a:not(:first-of-type) {
+  margin-left: 9rem;
+}
+
+.nav .login {
+  width: calc(100%/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.nav .login .login__inner a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 900;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.nav .links a {
-  text-decoration: none;
-  color: #bbb;
-  font-weight: 900;
+.nav .login .login__inner a img {
+  height: 40px;
+  margin-right: 0.4em;
 }
 
-.nav .login a {
-  text-decoration: none;
-  color: #bbb;
-  font-weight: 900;
+.content {
+  text-align: center;
+}
+
+.polling {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f93ff;
+  height: 30vh;
+  gap: 3rem;
+}
+
+.polling .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.polling .question h1 {
+  margin-right: 0.4em;
+  color: #ddd;
+}
+
+.polling .multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.polling .multi h1 {
+  color: #ddd;
+}
+
+.polling .multi .connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.6em;
+}
+
+.polling .multi .connect h1 {
+  color: #ddd;
 }
 /*# sourceMappingURL=Main.css.map */

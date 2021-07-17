@@ -1,15 +1,14 @@
 import './Polls.css';
 
 const Polls = () => {
-    var votes = 60;
+    var votes = 10;
+    document.querySelector('div').style.setProperty('--width', votes+'%');
+    setTimeout(() => {  votes = 50; document.querySelector('div').style.setProperty('--width', votes+'%'); }, 2000);
 
-    const style = document.documentElement.style;
-
-    style.setProperty('--width', votes);
-    
     return (
-        <div className="bar"></div>
+        <div class='bar bar-transition'></div>
     );
+
 }
  
 export default Polls;
