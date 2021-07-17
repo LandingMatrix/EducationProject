@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Polls from '.Polls'
+import Polls from './Polls'
 
 function App() {
   const companyName = 'Edisco';
