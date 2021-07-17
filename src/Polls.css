@@ -1,11 +1,15 @@
 :root {
-    --width: 0;
+    --width: 10;
 }
 
 
 .bar {
+    height: 30px;
+    background-color: green;
     transform:
-        width(var(--width));
+        width(10%);
     transition: transform 4s linear;
     will-change: transform;
 }
+
+/* calc(var(--width)*100%) */
