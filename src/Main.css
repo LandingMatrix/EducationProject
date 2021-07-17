@@ -1,11 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0b0b3a), to(#da370e));
-  background: linear-gradient(#0b0b3a, #da370e);
+  background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#f3f3f3));
+  background: linear-gradient(#d1d1d1, #f3f3f3);
   height: 100vh;
 }
 
@@ -24,8 +25,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem;
-  -webkit-backdrop-filter: blur(20rem);
-          backdrop-filter: blur(20rem);
+  background-color: #1f93ff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
 }
 
 .nav .logo {
@@ -71,63 +74,5 @@ body {
 
 .content {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    -webkit-animation: App-logo-spin infinite 20s linear;
-            animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@-webkit-keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
 /*# sourceMappingURL=Main.css.map */
