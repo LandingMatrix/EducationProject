@@ -23,19 +23,17 @@ let messages = [];
         to: "+61480093159",
         
     })
-    .then(m => messages = m)
+    .then(userNum => messages = userNum)
 
-messages.forEach(m => {
-    const num = m.from
+console.log(messages[0]);
 
+messages.forEach(userNum => {
+    const num = userNum.from
     client.messages.create({
 
         from: "+61480093159",
         to: num,
-        
-        
-
-        
+ 
         url: "https://handler.twilio.com/twiml/EH72a472ace7bb5161fc018ff43a41ffa8"
     })
 })
