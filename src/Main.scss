@@ -1,6 +1,7 @@
 // @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+
 *{
     padding: 0;
     margin: 0;
@@ -14,6 +15,8 @@ body{
     display: flex;
     position: sticky;
     top: 0;
+    // left: 0;
+    // right: 0;
     flex-direction: row;
     align-items: center;
     padding: 0.5rem;
@@ -21,7 +24,7 @@ body{
     // backdrop-filter: blur(20rem);
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 1.2em;
+    font-size: 1.3em;
     .logo{
         width: calc(100%/3);
         text-align: left;
@@ -37,7 +40,7 @@ body{
         justify-content: center;
         a{
             text-decoration: none;
-            color: #bbb;
+            color: #ddd;
             font-weight: 900;
             &:not(:first-of-type){
                 margin-left: 9rem;
@@ -46,19 +49,61 @@ body{
     }
     .login{
         width: calc(100%/3);
-        text-align: right;
-        a{
-            text-decoration: none;
-            color: #bbb;
-            font-weight: 900;
-            padding: 0.5rem;
+        display: flex;
+        flex-direction: row-reverse;
+        .login__inner{
+            a{
+                text-decoration: none;
+                color: #ddd;
+                font-weight: 900;
+                padding: 0.5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    height: 40px;
+                    margin-right: 0.4em;
+                }
+            }
         }
     }
 }
 .content {
     text-align: center;
-  }
-  
+}
+
+.polling {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1f93ff;
+    height: 30vh;
+    gap: 3rem;
+    .question{
+        display: flex;
+        justify-content: center;
+        h1{
+            margin-right: 0.4em;
+            color: #ddd;
+        }
+    }
+    .multi{
+        display: flex;
+        justify-content: center;
+        h1{
+            color: #ddd;
+        }
+        .connect{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            padding: 0.6em;
+            h1{
+                color: #ddd;
+            }
+        }
+    }
+}
 //   .App-logo {
 //     height: 40vmin;
 //     pointer-events: none;

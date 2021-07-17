@@ -28,7 +28,7 @@ body {
   background-color: #1f93ff;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .nav .logo {
@@ -52,7 +52,7 @@ body {
 
 .nav .links a {
   text-decoration: none;
-  color: #bbb;
+  color: #ddd;
   font-weight: 900;
 }
 
@@ -62,17 +62,98 @@ body {
 
 .nav .login {
   width: calc(100%/3);
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
-.nav .login a {
+.nav .login .login__inner a {
   text-decoration: none;
-  color: #bbb;
+  color: #ddd;
   font-weight: 900;
   padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .login .login__inner a img {
+  height: 40px;
+  margin-right: 0.4em;
 }
 
 .content {
   text-align: center;
+}
+
+.polling {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1f93ff;
+  height: 30vh;
+  gap: 3rem;
+}
+
+.polling .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.polling .question h1 {
+  margin-right: 0.4em;
+  color: #ddd;
+}
+
+.polling .multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.polling .multi h1 {
+  color: #ddd;
+}
+
+.polling .multi .connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.6em;
+}
+
+.polling .multi .connect h1 {
+  color: #ddd;
 }
 /*# sourceMappingURL=Main.css.map */
