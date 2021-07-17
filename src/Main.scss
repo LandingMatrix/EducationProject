@@ -8,7 +8,7 @@
 }
 body{
     background: linear-gradient(rgb(209, 209, 209), rgb(243, 243, 243));
-    height: 200vh;
+    height: 100vh;
 }
 .nav{
     display: flex;
@@ -23,7 +23,7 @@ body{
     // backdrop-filter: blur(20rem);
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
-    font-size: 1.2em;
+    font-size: 1.3em;
     .logo{
         width: calc(100%/3);
         text-align: left;

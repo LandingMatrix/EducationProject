@@ -7,7 +7,7 @@
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#f3f3f3));
   background: linear-gradient(#d1d1d1, #f3f3f3);
-  height: 200vh;
+  height: 100vh;
 }
 
 .nav {
@@ -28,7 +28,7 @@ body {
   background-color: #1f93ff;
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .nav .logo {
