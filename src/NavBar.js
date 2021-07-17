@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './Main.css';
 
 function NavBar() {
@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <div className="nav">
       <div className="logo">
-        <h1>{ companyName }</h1>
+        <img src={ logo } alt=""/>
       </div>
       <div className="links">
         <a href="#">Home</a>
