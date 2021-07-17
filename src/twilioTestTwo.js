@@ -1,6 +1,7 @@
 require('dotenv').config()
 const fs = require('fs');
 
+
 //calling values from .env file - for security/privacy purposes
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -14,51 +15,45 @@ const http = require('http');
 const app = express();
 
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
-const bodyParser = require('body-parser');
+const { default: userEvent } = require('@testing-library/user-event');
 
-app.use(bodyParser.urlencoded({ extended: false }));
 
-let messages = [];
-    client.messages.list({
-        to: "+61480093159",
-        
-    })
-    .then(userNum => messages = userNum)
+app.use(express.urlencoded({ extended: false }));
 
-console.log(messages[0]);
 
-messages.forEach(userNum => {
-    const num = userNum.from
-    client.messages.create({
 
-        from: "+61480093159",
-        to: num,
- 
-        url: "https://handler.twilio.com/twiml/EH72a472ace7bb5161fc018ff43a41ffa8"
-    })
-})
 app.post('/sms', (req, res) => {
-  const twiml = new MessagingResponse();
 
-  twiml.message('The Robots are coming! Head for the hills!');
+    console.log(req.body.From);
+    // convert JSON object to string
+    const data = JSON.stringify(req.body.From);
 
-  res.writeHead(200, {'Content-Type': 'text/xml'});
-  res.end(twiml.toString());
+    
+    
+    
+    // write JSON string to a file - the a flag appends if the file does not already exist
+    fs.writeFile('user.json', data + ',', { flag: 'a+'}, (err) => {
+        var arrData = data;
+        var collData = JSON.parse('[' + arrData + ']');
+        
+
+    if (err) {
+        throw err;
+    }
+    console.log(collData);
 });
 
-http.createServer(app).listen(1337, () => {
-  console.log('Express server listening on port 1337');
+    const response = '<Response><Message>Welcome to Edia, are you ready to answer our QUESTIONS???</Message></Response>';
+    res.setHeader('Content-Type', 'text/xml');
+    res.send(response);
+});
+
+app.listen(3500, () => {
+  console.log('Express server listening on port 3500');
 });
 
 
-// const data = JSON.stringify(messages);
-//   // write JSON string to a file
-//   fs.writeFile('user.json', data, (err) => {
-//     if (err) {
-//         throw err;
-//     }
-//     console.log("JSON data is saved.");
-// });
+  
 
 
 
