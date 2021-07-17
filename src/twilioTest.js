@@ -1,9 +1,4 @@
-
-
-console.log(`Your port is ${process.env.PORT}`); // undefined
-const dotenv = require('dotenv');
-dotenv.config();
-console.log(`Your port is ${process.env.PORT}`); 
+require('dotenv').config()
 
 //calling values from .env file - for security/privacy purposes
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
