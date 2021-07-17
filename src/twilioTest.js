@@ -1,13 +1,20 @@
 
+
+console.log(`Your port is ${process.env.PORT}`); // undefined
+const dotenv = require('dotenv');
+dotenv.config();
+console.log(`Your port is ${process.env.PORT}`); 
+
+//calling values from .env file - for security/privacy purposes
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require('twilio')(accountSid, authToken); 
  
 client.messages 
       .create({ 
-         body: 'HIII Thomass :)))',  
+         body: 'HIII :)))',  
          messagingServiceSid: 'MG0d85bd1acab334cf22691b901a316e10',      
-         to: '+61423456084' 
+         to: '+61434190715' 
        }) 
       .then(message => console.log(message.sid)) 
       .done();
