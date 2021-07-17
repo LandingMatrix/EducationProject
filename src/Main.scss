@@ -1,0 +1,22 @@
+.nav{
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .links{
+        a{
+            text-decoration: none;
+            color: #bbb;
+            font-weight: 900;
+        }
+    }
+    .login{
+        a{
+            text-decoration: none;
+            color: #bbb;
+            font-weight: 900;
+        }
+    }
+}
