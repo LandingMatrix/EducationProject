@@ -52,7 +52,7 @@ body {
 
 .nav .links a {
   text-decoration: none;
-  color: #bbb;
+  color: #ddd;
   font-weight: 900;
 }
 
@@ -73,7 +73,7 @@ body {
 
 .nav .login .login__inner a {
   text-decoration: none;
-  color: #bbb;
+  color: #ddd;
   font-weight: 900;
   padding: 0.5rem;
   display: -webkit-box;
