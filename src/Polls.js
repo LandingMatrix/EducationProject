@@ -1,15 +1,15 @@
 import './Polls.css';
-
+let root = document.documentElement;
 const Polls = () => {
     updateVotes('ans1', 100);
-    setTimeout(() => { updateVotes('ans2', 20); }, 2000);
+    setTimeout(() => { updateVotes('ans1', 20); }, 2000);
 
     return (
         <div class='bar bar-transition ans1'></div>
     );
 
     function updateVotes(ans, votes) {
-        document.querySelector('div').style.setProperty('--width-'+ans, votes+'%');
+        root.style.setProperty('--width-'+ans, votes+'%');
     }
 }
  
