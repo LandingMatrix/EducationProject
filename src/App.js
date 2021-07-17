@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import Polls from './Polls'
 
 function App() {
-  const companyName = 'Edisco';
+  const companyName = 'Edia';
   
   return (
     <div className="App">

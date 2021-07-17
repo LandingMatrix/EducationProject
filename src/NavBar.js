@@ -3,8 +3,6 @@ import profile from './profile.png';
 import './Main.css';
 
 function NavBar() {
-  const companyName = 'Edisco';
-
   return (
     <div className="nav">
       <div className="logo">
