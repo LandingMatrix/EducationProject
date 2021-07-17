@@ -1,11 +1,20 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .nav{
     display: flex;
     position: sticky;
     top: 0;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    .logo{
+        width: calc(100%/3);
+    }
     .links{
+        width: calc(100%/3);
+        display: ;
         a{
             text-decoration: none;
             color: #bbb;
@@ -13,6 +22,7 @@
         }
     }
     .login{
+        width: calc(100%/3);
         a{
             text-decoration: none;
             color: #bbb;
