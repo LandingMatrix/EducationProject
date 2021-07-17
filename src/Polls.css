@@ -1,13 +1,11 @@
 :root {
+    --width: 0;
 }
 
-.bar1 {
-    --width: 0%
-    height: 30px;
-    background-color: green;
-    animation: Bar-Transition 4s linear infinite alternate;
-}
 
-@keyframes Bar-Transition {
-    100% { width: }
+.bar {
+    transform:
+        width(var(--width));
+    transition: transform 4s linear;
+    will-change: transform;
 }
