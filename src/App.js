@@ -3,6 +3,7 @@ import './Main.css';
 import NavBar from './NavBar';
 import Polls from './pollCmp/Polls';
 import Question from './Question';
+import Client from './client';
 
 function App() {
   const companyName = 'Edia';
@@ -12,6 +13,7 @@ function App() {
       <div className="content">
         <NavBar />
         <Question />
+        <Client />
         <Polls />
       </div>
     </div>
