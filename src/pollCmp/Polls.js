@@ -2,6 +2,7 @@ import './Polls.css';
 let root = document.documentElement;
 const Polls = () => {
 
+    const correctAns = '19'
     const options = ["19", "21", "22", "26", "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"];
     const answers = [6, 5, 4, 2, 10];
 

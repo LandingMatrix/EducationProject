@@ -82,18 +82,19 @@
 
 .poll-bg {
     font-family: 'Roboto', sans-serif;
-    font-size: 35px;
+    font-size: 65px;
+    margin-top: 2rem;
 }
 
 .bar {
-    height: 50px;
+    height: 90px;
     margin: 10px;
     border-radius: 0px 10px 10px 0px;
 
     text-align: left;
     color: var(--pastelGray);
     &:after {
-        padding-left: 10px;
+        padding-left: 15px;
         vertical-align: middle;
         mix-blend-mode: difference;
     }
