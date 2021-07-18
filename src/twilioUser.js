@@ -52,6 +52,7 @@ app.post('/sms', (req, res) => {
       console.log(users);
     } else {
       response = '<Response><Message>Okay, here is the question: </Message></Response>';
+      response = '<Response><Message>What is your favourite animal?</Message></Response>';
     }
 
     res.setHeader('Content-Type', 'text/xml');
