@@ -20,6 +20,7 @@ const { default: userEvent } = require('@testing-library/user-event');
 var response = '';
 
 
+
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/sms', (req, res) => {
@@ -51,8 +52,7 @@ app.post('/sms', (req, res) => {
       users.push(data);
       console.log(users);
     } else {
-      response = '<Response><Message>Okay, here is the question: </Message></Response>';
-      response = '<Response><Message>What is your favourite animal?</Message></Response>';
+      response = '<Response><Message>Okay, here is the question: \nWhat is your favourite animal? </Message></Response>';
     }
 
     res.setHeader('Content-Type', 'text/xml');
