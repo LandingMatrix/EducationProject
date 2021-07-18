@@ -17,60 +17,97 @@ const app = express();
 const MessagingResponse = require('twilio').twiml.MessagingResponse;
 const { default: userEvent } = require('@testing-library/user-event');
 
+var response = '';
+
 
 app.use(express.urlencoded({ extended: false }));
 
 app.post('/sms', (req, res) => {
+    const twiml = new MessagingResponse();
 
-    console.log(req.body.From);
+    // console.log(req.body.From);
     // convert JSON object to string
     const data = JSON.stringify(req.body.From);
+    const userData = (req.body.Body);
+    const formatData = '[' + data + ']'
 
-
-    // write JSON string to a file - the a flag appends if the file does not already exist
-    fs.writeFile('user.json', data + ',', { flag: 'a+'}, (err) => {
-        var arrData = data;
-        var collData = JSON.parse('[' + arrData + ']');
-        
-    if (err) {
-        throw err;
+    let users = require('./user.json');
+  
+    
+   
+      function findUser(number) {
+        for (var index in users) {
+            if (users[index] == number) {
+                return users[index]; //user exists in system
+            }
+        }
+        return null;
     }
-    console.log(collData);
-});
+    
+   
+    
+    var user = findUser(data);
+    if (user == null) {
+      response = '<Response><Message>Welcome to EDIA ' + userData + ', are you ready to answer our questions?</Message></Response>';
+      users.push(data);
+      console.log(users);
+    } else {
+      response = '<Response><Message>Okay ' + userData + ', here is the question: </Message></Response>';
+    }
 
-    const response = '<Response><Message>Welcome to Edia, are you ready to answer our questions?</Message></Response>';
+    // if (formatData == users) {
+    //   response = '<Response><Message>Okay' + userData + ', here is the question: </Message></Response>';
+
+
+    // } else {
+    //   fs.writeFile('user.json', formatData, { flag: 'a+'}, (err) => {
+        
+    //     var resData = JSON.parse(formatData);
+    //     console.log(resData);
+        
+    //   if (err) {
+    //       throw err;
+    //   }
+    
+    //   });
+    // response = '<Response><Message>Welcome to EDIA ' + userData + ', are you ready to answer our questions?</Message></Response>';
+    // }
+
     res.setHeader('Content-Type', 'text/xml');
     res.send(response);
+
 });
 
 
 
-app.get('/', (req, res) => {
+// app.get('/sms', (req, res) => {
 
-  //would req name from json file work?
+//   //would req name from json file work?
 
-  fs.readFile('towardsUser.json', (err, towardsData) => {
-    if (err) {
-        throw err;
-    }
-    var towardsUser = JSON.parse(towardsData);
-    console.log(towardsUser);
+//   fs.readFile('towardsUser.json', (err, towardsData) => {
+//     if (err) {
+//         throw err;
+//     }
+//     var towardsUser = JSON.parse(towardsData);
+//     console.log(towardsUser);
 
-    const askUser = {
-        body: 'You have recieved an automated message!',
-        from: '+61480093159',
-        to: towardsUser[0],
-    };
+//     client.messages.create({})
+
+//      const askUser = {
+//          body: 'You have recieved an automated message!',
+//          from: '+61480093159',
+//          to: '+61434190715',
+//      };
 
 
   
-    res.setHeader('Content-Type', 'text/xml');
-    res.send(askUser);
-    console.log('chekc');
+//     res.setHeader('Content-Type', 'text/xml');
+//     res.send(askUser);
+//     console.log('check');
 
-  });
+//   });
 
-});
+// });
 
 app.listen(3500, () => {
   console.log('Express server listening on port 3500');
