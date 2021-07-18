@@ -52,7 +52,7 @@ app.post('/sms', (req, res) => {
       users.push(data);
       console.log(users);
     } else {
-      response = '<Response><Message>Okay ' + userData + ', here is the question: </Message></Response>';
+      response = '<Response><Message>Okay, here is the question: </Message></Response>';
     }
 
     // if (formatData == users) {
