@@ -45,7 +45,9 @@ app.post('/sms', (req, res) => {
 
 
 
-app.post('/sms', (req, res) => {
+app.get('/', (req, res) => {
+
+  //would req name from json file work?
 
   fs.readFile('towardsUser.json', (err, towardsData) => {
     if (err) {
@@ -54,11 +56,17 @@ app.post('/sms', (req, res) => {
     var towardsUser = JSON.parse(towardsData);
     console.log(towardsUser);
 
+    const askUser = {
+        body: 'You have recieved an automated message!',
+        from: '+61480093159',
+        to: towardsUser[0],
+    };
 
-    const askUser = '<Response><Message>You have recieved an automated message!</Message></Response>';
+
+  
     res.setHeader('Content-Type', 'text/xml');
-    res.send({body: 'You have recieved an automated message!', from: '+61480093159', to: towardsUser[0] })
-    .then(message => console.log(message.sid));
+    res.send(askUser);
+    console.log('chekc');
 
   });
 
