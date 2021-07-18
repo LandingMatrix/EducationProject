@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './Main.css';
 
+import Main from './Content';
 import NavBar from './NavBar';
 import Polls from './pollCmp/Polls';
-import Question from './Question';
 import Client from './client';
 
 function App() {
@@ -13,9 +13,8 @@ function App() {
     <div className="App">
       <div className="content">
         <NavBar />
-        <Question />
+        <Main />
         <Client />
-        <Polls />
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { NavLink, Switch, Route } from 'react-router-dom';
+
 import logo from './logo.png';
 import profile from './profile.png';
 import './Main.css';
@@ -6,18 +8,16 @@ function NavBar() {
   return (
     <div className="nav">
       <div className="logo">
-        <link to="/Question"><img src={ logo } alt=""/></link>
+        <div className='link'><NavLink to='/'><img src={ logo } alt=""/></NavLink></div>
       </div>
-      <div className="links">
-        <ul>
-          <li to="">Home</li>
-          <li href="#">Contact</li>
-          <li href="#">About</li>
-        </ul>
+      <div className="tabs">
+          <NavLink exact className = 'link' activeClassName="current" to='/' style={{ textDecoration: 'none' }}>Home</NavLink>
+          <NavLink exact className = 'link' activeClassName="current" to='/Poll' style={{ textDecoration: 'none' }} >Poll</NavLink>
       </div>
+
       <div className="login">
         <div className="login__inner">
-          <Link href="#"><img src={ profile } alt=""/> Log in </Link>
+          <NavLink to='/'><img src={ profile } alt=""/> Log in </NavLink>
         </div>
       </div>
     </div>
