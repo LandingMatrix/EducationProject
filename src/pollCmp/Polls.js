@@ -19,12 +19,12 @@ const Polls = () => {
     setTimeout(() => {  markCorrect('21', options); }, 8000);
 
     return (
-        <div class="poll-bg">
-            <div class='bar bar-transition ans1'></div>
-            <div class='bar bar-transition ans2'></div>
-            <div class='bar bar-transition ans3'></div>
-            <div class='bar bar-transition ans4'></div>
-            <div class='bar bar-transition ans5'></div>
+        <div className="poll-bg">
+            <div className='bar bar-transition ans1'></div>
+            <div className='bar bar-transition ans2'></div>
+            <div className='bar bar-transition ans3'></div>
+            <div className='bar bar-transition ans4'></div>
+            <div className='bar bar-transition ans5'></div>
         </div>
     );
 
