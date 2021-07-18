@@ -26,7 +26,7 @@ app.post('/sms', (req, res) => {
     const twiml = new MessagingResponse();
 
     // console.log(req.body.From);
-    
+
     // convert JSON object to string
     const data = JSON.stringify(req.body.From);
     const userData = (req.body.Body);
@@ -57,4 +57,8 @@ app.post('/sms', (req, res) => {
     res.setHeader('Content-Type', 'text/xml');
     res.send(response);
 
+});
+
+app.listen(3500, () => {
+  console.log('Express server listening on port 3500');
 });
