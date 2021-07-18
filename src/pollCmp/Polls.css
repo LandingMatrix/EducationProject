@@ -46,7 +46,7 @@
 
 .ans2:after {
   color: var(--bg-ans2);
-  content: var(--ans3);
+  content: var(--ans2);
 }
 
 .ans3 {
@@ -81,12 +81,12 @@
 
 .poll-bg {
   font-family: 'Roboto', sans-serif;
-  font-size: 65px;
+  font-size: 40px;
   margin-top: 2rem;
 }
 
 .bar {
-  height: 90px;
+  height: 50px;
   margin: 10px;
   border-radius: 0px 10px 10px 0px;
   text-align: left;

@@ -3,7 +3,7 @@ let root = document.documentElement;
 const Polls = () => {
 
     const correctAns = '19'
-    const options = ["19", "21", "22", "26", "asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"];
+    const options = ["GIRAFFE", "KANGAROO", "LEOPARD", "ZEBRA", "CROCODILE"];
     const answers = [6, 5, 4, 2, 10];
 
     //colour and populate each poll bar
@@ -15,9 +15,9 @@ const Polls = () => {
 
     updateVotes(answers);
 
-    setTimeout(() => {  updateVotes([3, 7, 4, 2, 0]); }, 3000);
+    setTimeout(() => {  updateVotes([3, 7, 4, 2, 1]); }, 3000);
 
-    setTimeout(() => {  markCorrect('21', options); }, 8000);
+    setTimeout(() => {  markCorrect('kangaroo', options); }, 8000);
 
     return (
         <div className="poll-bg">
